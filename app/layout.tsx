@@ -2,68 +2,63 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'PUBG Polymer Calculator — คำนวณ Polymers อัพเกรดปืน',
-  description: 'คำนวณ Polymers ที่ต้องการอัพเกรดปืน PUBG พร้อมเปรียบเทียบราคาจาก Steam Market แบบ Real-time',
-  keywords: 'PUBG, Polymer, Calculator, Weapon Upgrade, Steam Market, PUBG Thailand',
+  title: 'XENIX Polymer Calculator — คำนวณ Polymer PUBG',
+  description: 'เครื่องมือ XENIX สำหรับคำนวณ Polymer อัปเกรดปืน PUBG พร้อมเปรียบเทียบราคาจาก Steam Market',
+  keywords: 'XENIX, PUBG, Polymer, Calculator, Weapon Upgrade, Steam Market, PUBG Thailand',
   openGraph: {
-    title: 'PUBG Polymer Calculator',
-    description: 'คำนวณ Polymers อัพเกรดปืน PUBG พร้อมราคา Steam Market',
+    title: 'XENIX Polymer Calculator',
+    description: 'คำนวณ Polymer อัปเกรดปืน PUBG พร้อมราคา Steam Market',
     type: 'website',
   },
 }
 
+const navLink = {
+  color: '#a2a6b3',
+  fontSize: '13px',
+  fontWeight: 600,
+  textDecoration: 'none',
+  whiteSpace: 'nowrap',
+} as const
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="th">
-      <body style={{margin:0,padding:0,background:'#0a0a0f',minHeight:'100vh',fontFamily:'Inter, Noto Sans Thai, sans-serif'}}>
-        {/* Navbar */}
-        <nav style={{background:'#0f0f1a',borderBottom:'1px solid #1e1e2e',padding:'0 24px',height:'56px',display:'flex',alignItems:'center',justifyContent:'space-between',position:'sticky',top:0,zIndex:100}}>
-          <div style={{display:'flex',alignItems:'center',gap:'12px'}}>
-            <div style={{width:'32px',height:'32px',background:'#E24B4A',borderRadius:'8px',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:'bold',fontSize:'14px',color:'white'}}>P</div>
-            <span style={{fontWeight:'700',fontSize:'16px',color:'white',letterSpacing:'0.05em'}}>PUBG <span style={{color:'#E24B4A'}}>POLYMER</span></span>
+      <body style={{margin:0,padding:0,background:'#111217',color:'#f5f4f0',minHeight:'100vh',fontFamily:'Inter, Noto Sans Thai, system-ui, sans-serif'}}>
+        <nav style={{background:'#17181f',borderBottom:'1px solid #2b2d36',padding:'14px 4%',minHeight:'72px',display:'flex',alignItems:'center',gap:'28px',position:'sticky',top:0,zIndex:100,boxSizing:'border-box',flexWrap:'wrap'}}>
+          <a href="https://xenix-shop-web.vercel.app/" style={{color:'#f5f4f0',fontSize:'25px',fontWeight:950,letterSpacing:'-1px',lineHeight:1,textDecoration:'none'}}>
+            XENIX
+            <span style={{display:'block',fontSize:'9px',letterSpacing:'2.5px',color:'#efc45b',marginTop:'5px'}}>POLYMER TOOLS</span>
+          </a>
+          <div style={{display:'flex',alignItems:'center',gap:'22px',flex:1,flexWrap:'wrap'}}>
+            <a href="https://xenix-shop-web.vercel.app/" style={navLink}>สุ่มประจำวัน</a>
+            <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>ร้าน CDK</a>
+            <a href="https://xenix-shop-web.vercel.app/polymer" style={{...navLink,color:'#efc45b'}}>คำนวณ Polymer</a>
           </div>
-          <div style={{display:'flex',alignItems:'center',gap:'8px'}}>
-            <a href="https://steamcommunity.com/market/search?appid=578080" target="_blank" rel="noopener noreferrer" style={{fontSize:'12px',color:'#888',textDecoration:'none',padding:'6px 12px',border:'1px solid #2a2a3e',borderRadius:'20px',transition:'all 0.2s'}}>Steam Market</a>
-          </div>
+          <a href="https://steamcommunity.com/market/search?appid=578080" target="_blank" rel="noopener noreferrer" style={{fontSize:'12px',color:'#efc45b',textDecoration:'none',padding:'7px 13px',border:'1px solid #625338',borderRadius:'7px'}}>Steam Market ↗</a>
         </nav>
 
-        {/* Ad Banner Top */}
-<div style={{background:'#0f0f1a',borderBottom:'1px solid #1e1e2e',padding:'8px 24px',textAlign:'center'}}>
-  <div style={{maxWidth:'728px',margin:'0 auto'}}>
-    <a href="https://www.facebook.com/MyBoo147" target="_blank" rel="noopener noreferrer">
-      <img src="/myboo-banner.jpg" alt="MyBoo PUBG PC Buy and Sell" style={{width:'100%',height:'auto',borderRadius:'8px',display:'block'}}/>
-    </a>
-  </div>
-</div>
+        <div style={{background:'#17181f',borderBottom:'1px solid #2b2d36',padding:'8px 20px',textAlign:'center'}}>
+          <div style={{maxWidth:'728px',margin:'0 auto'}}>
+            <a href="https://www.facebook.com/MyBoo147" target="_blank" rel="noopener noreferrer">
+              <img src="/myboo-banner.jpg" alt="MyBoo PUBG PC Buy and Sell" style={{width:'100%',height:'auto',borderRadius:'8px',display:'block'}}/>
+            </a>
+          </div>
+        </div>
 
-        {/* Content */}
         <main>{children}</main>
 
-        {/* Footer */}
-        <footer style={{background:'#0f0f1a',borderTop:'1px solid #1e1e2e',padding:'32px 24px',marginTop:'48px'}}>
-          <div style={{maxWidth:'768px',margin:'0 auto'}}>
-            <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',flexWrap:'wrap',gap:'24px',marginBottom:'24px'}}>
-              <div>
-                <div style={{fontWeight:'700',fontSize:'16px',color:'white',marginBottom:'8px'}}>PUBG <span style={{color:'#E24B4A'}}>POLYMER</span></div>
-                <div style={{fontSize:'13px',color:'#666',maxWidth:'280px',lineHeight:'1.6'}}>เครื่องมือคำนวณ Polymers สำหรับอัพเกรดปืน PUBG พร้อมราคา Steam Market แบบ Real-time</div>
-              </div>
-              <div>
-                <div style={{fontSize:'12px',color:'#888',marginBottom:'8px',fontWeight:'500'}}>ลิงก์</div>
-                <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
-                  <a href="https://steamcommunity.com/market/search?appid=578080" target="_blank" rel="noopener noreferrer" style={{fontSize:'13px',color:'#666',textDecoration:'none'}}>Steam Market</a>
-                  <a href="https://pubg.com" target="_blank" rel="noopener noreferrer" style={{fontSize:'13px',color:'#666',textDecoration:'none'}}>PUBG Official</a>
-                </div>
-              </div>
-              <div>
-                <div style={{fontSize:'12px',color:'#888',marginBottom:'8px',fontWeight:'500'}}>ติดต่อโฆษณา</div>
-                <div style={{fontSize:'13px',color:'#666'}}>สนใจลงโฆษณา</div>
-                <div style={{fontSize:'13px',color:'#E24B4A',marginTop:'4px'}}>IG:dunk_ed</div>
-              </div>
+        <footer style={{background:'#17181f',borderTop:'1px solid #2b2d36',padding:'32px 24px',marginTop:'48px'}}>
+          <div style={{maxWidth:'900px',margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'flex-start',flexWrap:'wrap',gap:'28px'}}>
+            <div>
+              <div style={{fontWeight:900,fontSize:'19px',color:'#f5f4f0'}}>XENIX <span style={{color:'#efc45b'}}>POLYMER</span></div>
+              <div style={{fontSize:'13px',color:'#a2a6b3',maxWidth:'360px',lineHeight:1.7,marginTop:'8px'}}>เครื่องมือคำนวณ Polymer สำหรับอัปเกรดปืน PUBG พร้อมเปรียบเทียบราคา Steam Market</div>
             </div>
-            <div style={{borderTop:'1px solid #1e1e2e',paddingTop:'16px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'8px'}}>
-              <div style={{fontSize:'12px',color:'#444'}}>© 2025 PUBG Polymer Calculator. ไม่ได้เป็นส่วนหนึ่งของ Krafton หรือ Steam</div>
-              <div style={{fontSize:'12px',color:'#444'}}>ราคาจาก Steam Market อาจมีความล่าช้า</div>
+            <div style={{display:'flex',gap:'18px',flexWrap:'wrap'}}>
+              <a href="https://xenix-shop-web.vercel.app/" style={navLink}>XENIX Home</a>
+              <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>CDK Store</a>
+              <a href="https://pubg.com" target="_blank" rel="noopener noreferrer" style={navLink}>PUBG Official</a>
             </div>
+            <div style={{fontSize:'12px',color:'#777b88',flexBasis:'100%',borderTop:'1px solid #2b2d36',paddingTop:'16px'}}>© 2026 XENIX · ราคาจาก Steam Market อาจมีความล่าช้า · ไม่ได้เป็นส่วนหนึ่งของ Krafton หรือ Steam</div>
           </div>
         </footer>
       </body>
