@@ -3,25 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: dark;
+  --xenix-bg: #111217;
+  --xenix-panel: #191b23;
+  --xenix-line: #2b2d36;
+  --xenix-muted: #a2a6b3;
+  --xenix-gold: #efc45b;
+  --xenix-white: #f5f4f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--xenix-bg);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--xenix-white);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(74, 57, 43, .18), transparent 42rem),
+    var(--xenix-bg);
+}
+
+a, button, input, select {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--xenix-white);
+  outline-offset: 3px;
 }
