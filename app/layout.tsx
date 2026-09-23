@@ -27,7 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <nav style={{background:'#17181f',borderBottom:'1px solid #2b2d36',padding:'14px 4%',minHeight:'72px',display:'flex',alignItems:'center',gap:'28px',position:'sticky',top:0,zIndex:100,boxSizing:'border-box',flexWrap:'wrap'}}>
           <a href="https://xenix-shop-web.vercel.app/#cdk" style={{color:'#f5f4f0',fontSize:'25px',fontWeight:950,letterSpacing:'-1px',lineHeight:1,textDecoration:'none'}}>
             XENIX
-            <span style={{display:'block',fontSize:'9px',letterSpacing:'2.5px',color:'#efc45b',marginTop:'5px'}}>CODE SKIN · BONUS</span>
           </a>
           <div style={{display:'flex',alignItems:'center',gap:'22px',flex:1,flexWrap:'wrap'}}>
             <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>CODE SKIN</a>
