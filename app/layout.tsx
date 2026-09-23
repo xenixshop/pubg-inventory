@@ -25,13 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="th">
       <body style={{margin:0,padding:0,background:'#111217',color:'#f5f4f0',minHeight:'100vh',fontFamily:'Inter, Noto Sans Thai, system-ui, sans-serif'}}>
         <nav style={{background:'#17181f',borderBottom:'1px solid #2b2d36',padding:'14px 4%',minHeight:'72px',display:'flex',alignItems:'center',gap:'28px',position:'sticky',top:0,zIndex:100,boxSizing:'border-box',flexWrap:'wrap'}}>
-          <a href="https://xenix-shop-web.vercel.app/" style={{color:'#f5f4f0',fontSize:'25px',fontWeight:950,letterSpacing:'-1px',lineHeight:1,textDecoration:'none'}}>
+          <a href="https://xenix-shop-web.vercel.app/#cdk" style={{color:'#f5f4f0',fontSize:'25px',fontWeight:950,letterSpacing:'-1px',lineHeight:1,textDecoration:'none'}}>
             XENIX
-            <span style={{display:'block',fontSize:'9px',letterSpacing:'2.5px',color:'#efc45b',marginTop:'5px'}}>POLYMER TOOLS</span>
+            <span style={{display:'block',fontSize:'9px',letterSpacing:'2.5px',color:'#efc45b',marginTop:'5px'}}>CODE SKIN · BONUS</span>
           </a>
           <div style={{display:'flex',alignItems:'center',gap:'22px',flex:1,flexWrap:'wrap'}}>
-            <a href="https://xenix-shop-web.vercel.app/" style={navLink}>สุ่มประจำวัน</a>
-            <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>ร้าน CDK</a>
+            <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>CODE SKIN</a>
+            <a href="https://xenix-shop-web.vercel.app/#daily" style={navLink}>BONUS</a>
             <a href="https://xenix-shop-web.vercel.app/polymer" style={{...navLink,color:'#efc45b'}}>คำนวณ Polymer</a>
           </div>
           <a href="https://steamcommunity.com/market/search?appid=578080" target="_blank" rel="noopener noreferrer" style={{fontSize:'12px',color:'#efc45b',textDecoration:'none',padding:'7px 13px',border:'1px solid #625338',borderRadius:'7px'}}>Steam Market ↗</a>
