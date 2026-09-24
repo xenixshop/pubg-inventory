@@ -13,11 +13,19 @@ export const metadata: Metadata = {
 }
 
 const navLink = {
-  color: '#a2a6b3',
-  fontSize: '13px',
-  fontWeight: 600,
+  color: '#f5f4f0',
+  fontSize: '14px',
+  fontWeight: 800,
   textDecoration: 'none',
   whiteSpace: 'nowrap',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '44px',
+  padding: '9px 16px',
+  border: '1px solid #494d5c',
+  borderRadius: '9px',
+  background: '#232630',
 } as const
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,10 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="https://xenix-shop-web.vercel.app/#cdk" style={{color:'#f5f4f0',fontSize:'25px',fontWeight:950,letterSpacing:'-1px',lineHeight:1,textDecoration:'none'}}>
             XENIX
           </a>
-          <div style={{display:'flex',alignItems:'center',gap:'22px',flex:1,flexWrap:'wrap'}}>
+          <div style={{display:'flex',alignItems:'center',gap:'10px',flex:1,flexWrap:'wrap'}}>
             <a href="https://xenix-shop-web.vercel.app/#cdk" style={navLink}>CODE SKIN</a>
             <a href="https://xenix-shop-web.vercel.app/#daily" style={navLink}>BONUS</a>
-            <a href="https://xenix-shop-web.vercel.app/polymer" style={{...navLink,color:'#efc45b'}}>คำนวณ Polymer</a>
+            <a href="https://xenix-shop-web.vercel.app/polymer" style={{...navLink,color:'#efc45b',borderColor:'#b59242',background:'#302a20'}}>คำนวณ Polymer</a>
           </div>
           <a href="https://steamcommunity.com/market/search?appid=578080" target="_blank" rel="noopener noreferrer" style={{fontSize:'12px',color:'#efc45b',textDecoration:'none',padding:'7px 13px',border:'1px solid #625338',borderRadius:'7px'}}>Steam Market ↗</a>
         </nav>
